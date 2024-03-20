@@ -1,0 +1,12 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: keyclockauth
+
+  security:
+    oauth2:
+      resource-server:
+        jwt:
+          issuer-uri: http://localhost:8181/realms/Chandrashekhar
+          jwk-set-uri: ${spring.security.oauth2.resource-server.jwt.issuer-uri}/protocol/openid-connect/certs
